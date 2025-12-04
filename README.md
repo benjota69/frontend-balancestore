@@ -1,4 +1,4 @@
-# BalanceStore
+# Frontend - BalanceStore
 
 Integrantes:  
 - Benjamín Briceño  
@@ -6,3 +6,4 @@ Integrantes:
 
 Profesor:  
 - Javier Esteban Peña Reyes
+
