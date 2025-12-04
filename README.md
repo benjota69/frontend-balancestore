@@ -1,5 +1,7 @@
 # Frontend - BalanceStore
 
+Grupo 7
+
 Integrantes:  
 - Benjamín Briceño  
 - Bastián Matus  
