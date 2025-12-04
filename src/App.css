@@ -1,0 +1,55 @@
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Ajustes visuales simples para Home */
+.promo-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid #cfe8d8;
+}
+.promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.promo-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

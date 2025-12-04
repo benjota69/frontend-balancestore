@@ -1,0 +1,193 @@
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547; /* texto principal en claro */
+  background-color: #ffffff; /* fondo blanco */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Recuadro detrás del formulario de login (minimal) */
+.login-container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: min(90vw, 420px);
+}
+
+/* Layout y tarjeta de autenticación */
+.auth-page {
+  min-height: calc(100vh - 0px);
+  padding: 24px;
+}
+.auth-card {
+  background: #ffffff;
+  border: 1px solid #2e7d32;
+  border-radius: 16px;
+  color: #213547;
+}
+.auth-brand { font-size: 1.25rem; }
+.auth-legend { font-size: .95rem; }
+
+.auth-tabs .btn {
+  border-radius: 999px !important;
+}
+.auth-tabs .btn-outline-success {
+  background: transparent;
+}
+.auth-tabs .btn-success {
+  background: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.auth-card .form-control {
+  background: #ffffff;
+  color: #213547;
+  border-color: #d0d5dd;
+}
+.auth-card .form-control::placeholder { color: #9aa5b1; }
+.auth-card .btn-success { background:#2e7d32; border-color:#2e7d32; }
+
+/* Configuración del banner grande (tamaño) */
+.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.full-bleed img { width: 100%; height: auto; display: block; }
+
+/* Animación de deslice de texto (DeslizarTexto.jsx) */
+.text-slider { display:flex; align-items:center; gap:12px; width:100%; }
+.slider-btn { background:none; border:0; color:#6c757d; font-size:20px; padding:0 8px; line-height:1; }
+.slider-btn:hover { color:#2e7d32; cursor:pointer; }
+
+.text-slider-window { overflow:hidden; flex:1; }
+.text-slider-track { display:flex; transition: transform 400ms ease; will-change: transform; }
+.text-slider-item { flex:0 0 100%; text-align:center; white-space:nowrap; padding:6px 0; }
+
+/* Alineación limpia del formulario (mínimo y efectivo) */
+.login-container form { display: flex; flex-direction: column; gap: 0.8rem; }
+.login-container input { width: 100%; box-sizing: border-box; }
+.login-container button { align-self: center; }
+
+/* Responsive del texto del deslizador */
+:root{
+  --fs-xs: clamp(12px, 2.5vw, 14px);
+  --fs-sm: clamp(14px, 2vw, 16px);
+  --fs-md: clamp(16px, 1.6vw, 20px);
+  --fs-lg: clamp(20px, 2.4vw, 28px);
+  --fs-xl: clamp(28px, 4vw, 40px);
+}
+
+.resp-text-xs { font-size: var(--fs-xs); }
+.resp-text-sm { font-size: var(--fs-sm); }
+.resp-text-md { font-size: var(--fs-md); }
+.resp-text-lg { font-size: var(--fs-lg); }
+.resp-text-xl { font-size: var(--fs-xl); }
+
+.text-slider-window { overflow:hidden; flex:1; min-height: clamp(32px, 6vw, 44px); }
+.text-slider-item   { font-size: var(--fs-sm); padding: clamp(6px, 1.2vw, 10px) 0; }
+@media (max-width: 576px){
+  .text-slider-item { white-space: normal; line-height: 1.2; } 
+}
+
+/* Estado hover en claro */
+a:hover { color: #2e7d32; }
+.login-container { background: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+
+/* Animación suave al cargar cada página principal */
+.page-fade {
+  animation: pageFadeIn 320ms ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animaciones suaves para el modal de crear cuenta en Checkout */
+.modal-anim .modal-dialog {
+  opacity: 0;
+  transform: translateY(-6px);
+  animation: modalFadeIn 260ms ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-backdrop-anim {
+  animation: backdropFadeIn 260ms ease-out forwards;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
